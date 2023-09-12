@@ -33,6 +33,7 @@ body {
 
   /*background: color image repeat position/size */ /* Esta linha é um código em resumo da parte acima separada pelos tipo de background*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -86,7 +87,6 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
-
 }
 
 .light #switch button {
@@ -103,7 +103,6 @@ body * {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
-
 }
 
 /* links */
@@ -150,7 +149,7 @@ ul li a:hover {
   justify-content: center;
 
   padding: 24px 0;
- 
+
   font-size: 24px;
 }
 
@@ -172,4 +171,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
